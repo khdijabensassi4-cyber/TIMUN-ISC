@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TIMUN ISC — Tunis International Model United Nations</title>
+<meta name="description" content="Site officiel du Tunis International Model United Nations (TIMUN ISC), École Internationale de Carthage.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0B2852;--blue:#173B70;--gold:#D5B66F;--light:#F2F4F7;--text:#1E2A3A;--muted:#5B6676;--shadow:0 6px 22px rgba(11,40,82,.08)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Poppins,"Segoe UI",Arial,sans-serif;color:var(--text);line-height:1.65;background:#fff;padding-bottom:84px}
+img{max-width:100%;display:block}
+a{color:var(--blue)}
+p{margin:0 0 1em}
+h1,h2,h3,.brand,.btn,.main-nav a,.stat-value,.tl-date,.res-num,.eyebrow,.footer-title,.lang-tag,.badge,.issue-label,.com-num,.day-date,.bar button{font-family:Montserrat,"Segoe UI",Arial,sans-serif}
+h1{font-size:clamp(2rem,4vw,2.9rem);color:var(--navy);margin:.2em 0;line-height:1.2}
+h2{font-size:clamp(1.4rem,2.6vw,1.85rem);color:var(--navy);font-weight:700;margin:.4em 0 .6em}
+h3{font-size:1.05rem;color:var(--blue);font-weight:600;margin:.3em 0}
+/* navigation */
+#hdr{position:sticky;top:0;z-index:50;background:var(--navy);color:#fff;border-bottom:2px solid var(--gold);box-shadow:0 2px 10px rgba(0,0,0,.2)}
+.nav-inner{max-width:1200px;margin:0 auto;padding:10px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px;position:relative}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:#fff}
+.brand .media{width:44px;height:44px;min-height:0;background:none}
+.brand .media img{object-fit:contain;height:44px;width:auto}
+.brand .ph{display:none!important}
+.brand-name{font-weight:700;letter-spacing:.08em;font-size:1.1rem}
+.main-nav{display:flex;flex-wrap:wrap;gap:4px 14px;justify-content:flex-end}
+.main-nav a{color:#fff;text-decoration:none;font-size:.85rem;padding:6px 4px;border-bottom:2px solid transparent;font-weight:500}
+.main-nav a:hover,.main-nav a.active{color:var(--gold);border-bottom-color:var(--gold)}
+.menu-toggle{display:none;background:none;border:1px solid var(--gold);color:var(--gold);font-size:1.3rem;border-radius:6px;padding:2px 10px;cursor:pointer}
+/* layout */
+.container{max-width:1200px;margin:0 auto;padding:0 20px}
+.narrow{max-width:820px;margin:0 auto}
+.section{padding:64px 0}
+.section-alt{background:var(--light)}
+.section-title{text-align:center;margin-bottom:36px}
+.section-title::after{content:"";display:block;width:56px;height:3px;background:var(--gold);margin:12px auto 0;border-radius:2px}
+.center{text-align:center}
+.muted{color:var(--muted)}
+.small{font-size:.9rem}
+.eyebrow{text-transform:uppercase;letter-spacing:.14em;font-size:.78rem;color:var(--gold);font-weight:600;margin:0}
+.eyebrow a{color:var(--gold)}
+.sub{color:var(--muted);font-size:1.05rem}
+.lead-text{font-size:1.12rem;color:var(--navy)}
+.page-header{background:linear-gradient(135deg,var(--navy),var(--blue));color:#fff;padding:56px 20px;text-align:center}
+.page-header h1{color:#fff}
+.page-header .sub{color:#dbe3f0}
+.page-header .eyebrow a{color:var(--gold)}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+.cards{display:grid;gap:24px;grid-template-columns:repeat(3,1fr)}
+.cards-2{grid-template-columns:repeat(2,1fr)}
+.cards-4{grid-template-columns:repeat(4,1fr)}
+.cards-5{grid-template-columns:repeat(5,1fr)}
+.card{background:#fff;border-radius:10px;box-shadow:var(--shadow);padding:24px;border-top:3px solid var(--gold);color:inherit;text-decoration:none;display:block;position:relative}
+a.card:hover{transform:translateY(-3px);transition:transform .2s}
+.box{background:var(--light);border-radius:10px;padding:28px;margin:24px 0}
+.box h2{margin-top:0}
+.btn{display:inline-block;background:var(--navy);color:#fff;text-decoration:none;padding:12px 26px;border-radius:6px;font-weight:600;letter-spacing:.05em;font-size:.9rem;border:none;cursor:pointer}
+.btn:hover{background:var(--blue)}
+.btn-gold{background:var(--gold);color:var(--navy)}
+.btn-gold:hover{background:#e4c98e}
+.cta{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;margin-top:24px}
+.link-more{color:var(--blue);font-weight:600;font-size:.9rem}
+.badge{display:inline-block;background:var(--gold);color:var(--navy);font-size:.7rem;padding:2px 8px;border-radius:20px;margin-left:8px;vertical-align:middle;text-transform:uppercase}
+.check{padding-left:30px;position:relative;border-bottom:1px solid #e3e8ef;padding-top:8px;padding-bottom:8px}
+.check::before{content:"✓";position:absolute;left:0;color:var(--gold);font-weight:700}
+/* images */
+.media{position:relative;overflow:hidden;background:var(--light);border-radius:6px}
+.media img{width:100%;height:100%;object-fit:cover}
+.media .ph{display:none}
+.media.empty{min-height:120px;display:flex;align-items:center;justify-content:center;background:repeating-linear-gradient(45deg,var(--light),var(--light) 10px,#e6eaf1 10px,#e6eaf1 20px)}
+.media.empty img{display:none}
+.media.empty .ph{display:block;color:var(--muted);font-size:.8rem;text-align:center;padding:8px}
+.ctl{position:absolute;top:8px;right:8px;display:flex;gap:6px;opacity:0;transition:opacity .2s;z-index:3;flex-wrap:wrap;justify-content:flex-end}
+.media:hover .ctl,body.editing .ctl{opacity:1}
+/* accueil */
+.hero{position:relative;min-height:70vh;display:flex;align-items:center;justify-content:center;color:#fff;text-align:center;overflow:hidden;background:linear-gradient(135deg,var(--navy),var(--blue))}
+.hero-bg{position:absolute;inset:0;background-size:cover;background-position:center;opacity:.35}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,40,82,.4),rgba(11,40,82,.85));pointer-events:none}
+.hero-inner{position:relative;z-index:1;padding:60px 20px;max-width:860px}
+.hero h1{color:#fff;font-size:clamp(2.8rem,7vw,4.6rem);letter-spacing:.04em}
+.hero .eyebrow{color:var(--gold)}
+.tagline{font-family:Montserrat,sans-serif;font-size:1.3rem;color:var(--gold);font-weight:500}
+.lead{color:#e8eef7;font-size:1.05rem;max-width:680px;margin:0 auto}
+.hero .ctl{z-index:4}
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.stat{background:var(--navy);color:#fff;border-radius:10px;padding:22px;text-align:center;border-bottom:3px solid var(--gold)}
+.stat-value{display:block;font-size:2rem;font-weight:700;color:var(--gold)}
+.stat-label{font-size:.85rem}
+.chips{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:20px 0 28px}
+.chip{background:#fff;border:1px solid var(--gold);border-radius:30px;padding:8px 16px;text-decoration:none;color:var(--navy);font-size:.9rem}
+.chip b{color:var(--gold)}
+/* histoire */
+.timeline{list-style:none;padding:0 0 0 28px;margin:0 auto;border-left:3px solid var(--gold);max-width:760px}
+.timeline .item{padding:0 0 26px 0;position:relative;box-shadow:none;border:none;background:none}
+.timeline .item::before{content:"";position:absolute;left:-37px;top:6px;width:15px;height:15px;background:var(--navy);border-radius:50%;border:3px solid var(--gold)}
+.tl-date{display:block;font-weight:700;color:var(--navy)}
+.value-card{text-align:center}
+.value-card h3{color:var(--navy)}
+.value-card p{font-size:.92rem;color:var(--muted);margin:0}
+.person{text-align:center}
+.person .media{width:150px;height:150px;margin:0 auto 14px;border-radius:50%}
+.role{color:var(--blue);font-weight:600;font-size:.9rem;margin:0 0 8px}
+.person .txt{font-size:.92rem;color:var(--muted)}
+.resource-card h3{font-size:1.15rem}
+.resource-card p{color:var(--muted);font-size:.95rem}
+.res-num{font-weight:700;color:var(--gold);font-size:1.6rem}
+/* GA */
+.ga-banner{background:linear-gradient(135deg,var(--navy),var(--blue));color:#fff;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:32px;padding:56px max(20px,calc((100% - 1200px)/2));border-bottom:4px solid var(--gold)}
+.ga-banner h1{color:#fff;font-size:clamp(2.4rem,5vw,3.6rem)}
+.ga-banner .eyebrow{color:var(--gold)}
+.dates{font-family:Montserrat,sans-serif;color:var(--gold);font-size:1.2rem;font-weight:600;letter-spacing:.05em}
+.ga-poster{aspect-ratio:3/4;max-width:340px;justify-self:center;width:100%}
+.day-card{border-top-color:var(--navy)}
+.day-date{display:inline-block;color:var(--gold);font-weight:700;margin-bottom:6px}
+.info-list{list-style:none;padding:0}
+.info-list li{padding:12px 0;border-bottom:1px solid #e3e8ef}
+.info-list .lbl{font-weight:600;color:var(--navy);margin-right:6px}
+.gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:16px}
+.gallery figure{margin:0}
+.gallery .media{aspect-ratio:4/3}
+.gallery img{transition:transform .3s}
+.gallery img:hover{transform:scale(1.04)}
+.gallery figcaption{font-size:.85rem;color:var(--muted);margin-top:6px}
+/* comités */
+.committee{display:grid;grid-template-columns:260px 1fr;gap:40px;align-items:start;padding:48px 0;border-bottom:1px solid #e3e8ef}
+.committee:last-child{border-bottom:none}
+.emblem{width:240px;height:240px;aspect-ratio:1/1;border-radius:10px;box-shadow:var(--shadow)}
+.emblem img{object-fit:contain;padding:14px;background:#fff}
+.com-num{color:var(--gold);font-weight:700;letter-spacing:.08em;margin:0 0 4px;font-size:.85rem}
+.committee h2{font-size:clamp(1.2rem,2.2vw,1.5rem);margin-top:0}
+.fld{margin-bottom:6px}
+.lbl-s{font-family:Montserrat,sans-serif;font-size:.72rem;font-weight:700;letter-spacing:.1em;color:var(--blue);text-transform:uppercase;display:block;margin:18px 0 4px}
+.meta{font-size:.92rem;color:var(--muted);margin:0 0 4px}
+.meta b{color:var(--navy)}
+.issue{font-family:Montserrat,sans-serif;font-weight:500;color:var(--navy);font-size:1.05rem;margin:0}
+.version-sep{margin-top:36px;padding-top:28px;border-top:2px dashed var(--gold)}
+.lang-tag{display:inline-block;font-size:.7rem;font-weight:700;background:var(--navy);color:#fff;padding:3px 10px;border-radius:4px;margin-bottom:10px}
+/* actualités */
+.news-card{padding:0;overflow:hidden;border-top:none}
+.news-card .media{border-radius:0;aspect-ratio:16/9}
+.news-body{padding:20px}
+.news-body time{font-size:.8rem;color:var(--gold);font-weight:600;text-transform:uppercase;letter-spacing:.05em}
+.news-body p{color:var(--muted);font-size:.93rem}
+.article-cover{aspect-ratio:16/9;margin-bottom:24px}
+.square{width:180px;max-width:100%;aspect-ratio:1/1;justify-self:start}
+body.editing .intro-com-text [data-edit]{min-height:160px;padding:14px;background:#fffdf6;border:1px dashed var(--gold)}
+/* partenaires */
+.partner{text-align:center}
+.partner .logo{aspect-ratio:3/2;margin-bottom:14px}
+.partner .logo img{object-fit:contain;padding:12px;background:#fff}
+/* contact */
+.contact-form{background:var(--light);padding:32px;border-radius:10px;display:grid;gap:16px}
+.contact-form label{display:grid;gap:6px;font-weight:500;color:var(--navy);font-size:.92rem}
+.contact-form input,.contact-form textarea{font:inherit;padding:11px 12px;border:1px solid #c9d2df;border-radius:6px;background:#fff}
+.contact-form .btn{justify-self:start;border:none}
+.form-status{font-size:.9rem;color:var(--blue);margin:0}
+/* pdf */
+.pdfbox{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:14px 0}
+.pdfbox small{width:100%;color:var(--muted)}
+/* footer */
+#ftr{background:var(--navy);color:#cfd8e6;border-top:4px solid var(--gold)}
+.footer-inner{max-width:1200px;margin:0 auto;padding:48px 20px 32px;display:grid;grid-template-columns:2fr 1fr 1fr;gap:32px}
+.footer-inner strong{color:#fff;font-family:Montserrat,sans-serif;letter-spacing:.08em}
+.footer-inner a{color:#cfd8e6;text-decoration:none}
+.footer-inner a:hover{color:var(--gold)}
+.footer-title{color:var(--gold);font-weight:700;text-transform:uppercase;font-size:.8rem;letter-spacing:.1em}
+.footer-inner p{font-size:.92rem}
+.footer-bottom{text-align:center;font-size:.8rem;padding:16px;border-top:1px solid rgba(255,255,255,.1)}
+/* ====== mode édition ====== */
+body.editing [data-edit]{outline:1px dashed var(--gold);outline-offset:3px;cursor:text;border-radius:3px}
+body.editing [data-edit]:hover{background:rgba(213,182,111,.12)}
+[data-edit]:empty::before{content:attr(data-ph);color:#9aa3b2;font-style:italic}
+body.editing .item{outline:1px dashed #c9d2df;outline-offset:4px}
+.dinput{font:inherit;padding:6px 8px;border:1px dashed var(--gold);border-radius:6px;background:#fffdf6;color:var(--navy)}
+.ctl button,.pdfbox button,.addbtn,.del,.bar button{font:600 12px Montserrat,sans-serif;cursor:pointer;border-radius:6px;border:1px solid var(--navy);background:#fff;color:var(--navy);padding:6px 10px}
+.ctl button:hover,.pdfbox button:hover,.addbtn:hover{background:var(--gold)}
+.del{position:absolute;top:8px;right:8px;background:#fff;border-color:#c33;color:#c33;padding:3px 8px;font-size:11px;z-index:2}
+.del:hover{background:#c33;color:#fff}
+.pline{position:relative;padding-right:40px}
+.pline .del{top:6px;right:0}
+.addbtn{display:block;margin:14px auto;border-style:dashed;border-color:var(--gold);color:var(--navy)}
+.item .del{top:auto;bottom:10px;right:10px;z-index:10}
+.bar{position:fixed;left:0;right:0;bottom:0;background:var(--navy);display:flex;flex-wrap:wrap;gap:8px;padding:10px 14px;z-index:100;align-items:center;box-shadow:0 -4px 16px rgba(0,0,0,.25);border-top:2px solid var(--gold)}
+.bar button{background:transparent;color:#fff;border-color:rgba(255,255,255,.4)}
+.bar button:hover{background:rgba(255,255,255,.12)}
+.bar button.on{background:var(--gold);color:var(--navy);border-color:var(--gold)}
+.bar .hint{color:#dbe3f0;font-size:.85rem;margin-left:auto}
+.toast{position:fixed;top:14px;right:14px;background:var(--navy);color:#fff;padding:10px 16px;border-radius:8px;z-index:200;box-shadow:var(--shadow);font-size:.9rem;max-width:360px;display:none}
+.toast.err{background:#8a1f1f}
+.editnote{background:var(--gold);color:var(--navy);text-align:center;padding:8px 14px;font-size:.92rem;font-weight:500}
+/* responsive */
+@media (max-width:960px){
+  .cards-4,.cards-5,.cards{grid-template-columns:repeat(2,1fr)}
+  .committee{grid-template-columns:200px 1fr;gap:28px}
+  .emblem{width:190px;height:190px}
+}
+@media (max-width:760px){
+  .menu-toggle{display:block}
+  .main-nav{display:none;position:absolute;top:100%;left:0;right:0;background:var(--navy);flex-direction:column;gap:0;padding:8px 20px 16px;border-bottom:2px solid var(--gold)}
+  .main-nav.open{display:flex}
+  .main-nav a{padding:10px 0;border-bottom:1px solid rgba(255,255,255,.08)}
+  .two-col,.ga-banner{grid-template-columns:1fr}
+  .cards,.cards-2,.cards-4,.cards-5{grid-template-columns:1fr}
+  .committee{grid-template-columns:1fr;gap:20px;padding:36px 0}
+  .emblem{width:180px;height:180px;margin:0 auto}
+  .footer-inner{grid-template-columns:1fr}
+  .section{padding:48px 0}
+  .bar .hint{width:100%;margin:0}
+}
+</style>
+</head>
+<body data-public="1">
+<header id="hdr"></header>
+<div id="note"></div>
+<main id="app"></main>
+<footer id="ftr"></footer>
+<div id="bar" class="bar"></div>
+<div id="toast" class="toast"></div>
+<input type="file" id="fImg" accept="image/*" hidden>
+<input type="file" id="fPdf" accept="application/pdf" hidden>
+<input type="file" id="fJson" accept="application/json" hidden>
+
+<!-- Données du site (copie de départ). Les modifications faites dans le navigateur sont sauvegardées automatiquement. -->
+<script id="site-data" type="application/json">
+{
+ "site":{"name":"TIMUN ISC","school":"École Internationale de Carthage","logo":"","heroImage":"","email":"","instagram":"@timun.isc","instagramUrl":"https://www.instagram.com/timun.isc/","footerText":"Une plateforme institutionnelle pour présenter le club, accompagner les délégués et valoriser la Grande Assemblée.","contactFormEndpoint":""},
+ "home":{"kicker":"TUNIS INTERNATIONAL MODEL UNITED NATIONS","tagline":"Empowering voices. Shaping tomorrow.","intro":"Welcome to the official platform of the Tunis International Model United Nations. Discover our club, explore our committees, access delegate resources and follow our activities throughout the year.","welcomeTitle":"Welcome to TIMUN ISC","welcome":["The Tunis International Model United Nations (TIMUN ISC) is a student-led club based at the École Internationale de Carthage. It promotes diplomacy, international relations, public speaking and the understanding of global challenges.","Through Model United Nations simulations, training sessions and collaborative projects, students learn to research complex issues, represent different perspectives, negotiate and develop practical solutions."],
+  "stats":[{"label":"Membres actifs","value":"","visible":false},{"label":"Simulations organisées","value":"","visible":false},{"label":"Comités","value":"9","visible":true},{"label":"Établissements participants","value":"","visible":false}],
+  "featuredCount":3},
+ "about":{"presentation":["Fondé en mars 2018 au sein de l'École Internationale de Carthage, le Tunis International Model United Nations (TIMUN ISC) est un club scolaire consacré à la diplomatie, aux relations internationales, à l'éloquence et à la découverte des grands enjeux politiques, économiques, sociaux et environnementaux de notre monde.","Inspiré du fonctionnement de l'Organisation des Nations Unies, le club initie les élèves à l'art du débat, de la négociation et de la coopération internationale. Il leur offre un espace d'expression où les idées peuvent être défendues, confrontées et enrichies dans un cadre fondé sur le respect, l'écoute et l'ouverture d'esprit.","Bien plus qu'un simple club de débat, le TIMUN ISC constitue une expérience éducative, humaine et citoyenne. Au cours des simulations, les participants incarnent des délégués représentant des pays ou des acteurs institutionnels, défendent des positions officielles, construisent des alliances et recherchent des compromis autour de problématiques internationales."],
+  "timeline":[{"date":"Mars 2018","text":"Création du club par des élèves passionnés d'éloquence et de relations internationales."},{"date":"2019–2024","text":"Développement du club et installation de la Grande Simulation comme rendez-vous fédérateur de la vie scolaire."},{"date":"2025","text":"Consolidation du savoir-faire en matière d'accueil, de préparation des délégués et de gestion des comités."},{"date":"2026","text":"Préparation de MUN IN BETWEEN, présentée comme la 7e édition."}],
+  "mission":"Former une jeunesse cultivée, engagée et responsable, capable de comprendre la complexité des relations internationales, de porter un regard critique sur le monde et de défendre ses positions avec rigueur, diplomatie et respect.",
+  "objectives":["Développer la prise de parole en public, l'éloquence et l'argumentation.","Approfondir la culture générale et la compréhension des enjeux internationaux.","Former les membres à la recherche documentaire, aux procédures diplomatiques et à la rédaction de résolutions.","Encourager le leadership, l'autonomie, la créativité, l'adaptation et le travail en équipe.","Créer des liens et des échanges intellectuels et culturels entre élèves de différents établissements."],
+  "values":[{"name":"Dialogue","text":"Écouter, confronter les idées et rechercher des compromis."},{"name":"Respect","text":"Considérer les opinions différentes et défendre ses positions sans dévaloriser autrui."},{"name":"Coopération","text":"Construire des solutions collectives."},{"name":"Esprit critique","text":"Dépasser les idées reçues et examiner les enjeux avec rigueur."},{"name":"Engagement","text":"Participer activement à la vie du club et à ses projets."}],
+  "munTitle":"Qu'est-ce qu'un Model United Nations ?",
+  "mun":["A Model United Nations (MUN) is an educational simulation inspired by the work of the United Nations.","Participants take on the role of delegates representing countries or institutions. They research international issues, defend official positions, take part in formal debates, negotiate with other delegates and work towards solutions, often presented in the form of resolutions."]},
+ "club":{"functioning":["Tout au long de l'année, le TIMUN ISC organise des séances de formation consacrées aux procédures diplomatiques, à la prise de parole en public, à la recherche documentaire, à l'argumentation et à la rédaction de résolutions.","Ces formations sont complétées par des débats d'entraînement, des mini-simulations et des collaborations avec d'autres établissements scolaires."],
+  "board":[],"boardEmpty":"Le bureau sera présenté prochainement.",
+  "teams":[],
+  "recruitText":"Expliquer ici les modalités de recrutement, les périodes de candidature et les critères éventuels.","recruitContact":"Pour toute question, contactez l'équipe via la page Contact.","formUrl":""},
+ "resources":[
+  {"id":"opening-speech","number":"01","title":"Opening Speech Methodology","summary":"Learn how to prepare and deliver a clear, structured and persuasive opening speech.","intro":"Learn how to prepare and deliver a clear, structured and persuasive opening speech. This page explains the purpose of the speech, its expected structure, the key elements to include and practical preparation advice.","pdf":"","body":[]},
+  {"id":"position-paper","number":"02","title":"Position Paper Methodology","summary":"Understand how to research a committee topic, identify the represented country's position and write a structured position paper.","intro":"Understand how to research a committee topic, identify the represented country's position and write a structured position paper. This page presents the expected sections, the research approach and writing recommendations.","pdf":"","body":[]},
+  {"id":"mun-formalities","number":"03","title":"MUN Formalities","summary":"Discover the rules of procedure used during committee sessions: formal debate, speakers' list, motions, points, caucuses, voting procedures and basic vocabulary.","intro":"Discover the rules of procedure used during committee sessions: formal debate, speakers' list, motions, points, caucuses, voting procedures and the basic vocabulary required to participate.","pdf":"","body":[]},
+  {"id":"best-first-timer","number":"04","title":"Best First Timer Guide","summary":"A beginner-friendly introduction to the MUN experience.","intro":"A beginner-friendly introduction to the MUN experience. Find out what a delegate does before and during the conference, how to prepare, what to expect in committee and how to participate with confidence.","pdf":"","body":[]}
+ ],
+ "ga":{"edition":"MUN IN BETWEEN","editionLabel":"TIMUN ISC — 7th Edition","dates":"17, 18 & 19 DECEMBER 2026","poster":"",
+  "presentation":["The TIMUN ISC Grand Assembly is the club's annual flagship event, bringing together students from different schools and educational backgrounds for several days of diplomacy, debate and international cooperation.","Through nine committees addressing political, historical and international issues, participants develop their research, argumentation, negotiation and public-speaking skills. The event is designed as an immersive educational experience where students exchange perspectives, build connections and work together on complex global challenges."],
+  "days":[{"date":"17 December","title":"Opening Ceremony","text":"Opening ceremony planned at an external venue, with welcoming remarks, speeches and a welcome reception."},{"date":"18 December","title":"Committee Sessions","text":"Academic sessions and committee debates at the École Internationale de Carthage."},{"date":"19 December","title":"Committee Sessions and Closing Events","text":"Continuation of the simulation, closing ceremony and the planned gala."}],
+  "practical":{"dates":"17, 18 et 19 décembre 2026","public":"Collégiens, lycéens et étudiants universitaires","openingVenue":"","sessionsVenue":"École Internationale de Carthage","registrationUrl":"","programmePdf":""},
+  "gallery":[]},
+ "committees":[
+  {"id":"un-women","number":"01","emblem":"","status":"","versions":[{"lang":"FR","title":"UN WOMEN — Les droits des femmes dans un monde en crise","institution":"Commission de la condition de la femme (CSW), avec ONU Femmes comme cadre de référence","type":"Social, diplomatique et géopolitique","issue":"Les droits des femmes peuvent-ils justifier une intervention internationale dans les affaires intérieures d'un État ?","overview":"Ce comité oppose deux principes fondamentaux du droit international : l'universalité des droits humains et la protection urgente des femmes en zone de crise, d'une part, et la souveraineté nationale ainsi que le principe de non-ingérence, d'autre part. Les délégués devront déterminer jusqu'où la communauté internationale peut agir — par des sanctions, une aide conditionnée ou une pression diplomatique — face à des régimes qui restreignent gravement les libertés des femmes."}]},
+  {"id":"san-remo","number":"02","emblem":"","status":"","versions":[{"lang":"FR","title":"COMITÉ HISTORIQUE — La conférence de San Remo (1920)","institution":"Conférence de San Remo","type":"Comité historique","issue":"Les puissances victorieuses peuvent-elles décider de l'avenir politique du Moyen-Orient sans consulter les populations concernées ?","overview":"Ce comité replace les délégués dans le contexte de l'après-Première Guerre mondiale et de la Conférence de San Remo de 1920. Ils devront examiner les décisions des puissances victorieuses concernant l'avenir politique du Moyen-Orient, les intérêts des puissances étrangères et la place accordée aux populations locales. Les discussions permettront d'interroger la légitimité des décisions internationales prises sans consultation directe des populations concernées."}]},
+  {"id":"cio","number":"03","emblem":"","status":"","versions":[{"lang":"FR","title":"CIO — Le sport au cœur des tensions internationales","institution":"Comité international olympique (CIO)","type":"Comité spécialisé non onusien","issue":"Le sport peut-il réellement rester neutre face aux conflits géopolitiques contemporains ?","overview":"La Charte olympique prône la neutralité politique du sport, mais les crises géopolitiques rattrapent régulièrement les compétitions mondiales. Les membres du CIO devront décider comment gérer le boycott de certains pays, la participation d'athlètes sous bannière neutre et l'attribution des Jeux à des régimes controversés. Le débat porte sur la frontière entre l'idéal pacifiste du sport et son utilisation comme outil de soft power."}]},
+  {"id":"unesco","number":"04","emblem":"","status":"","versions":[
+    {"lang":"FR","title":"UNESCO — Culture, éducation et conflits contemporains","institution":"UNESCO / Comité du patrimoine mondial selon le sujet","type":"Culturel, éducatif et diplomatique","issue":"Comment protéger le patrimoine culturel dans les territoires touchés par des conflits armés ?","overview":"Dans les guerres modernes, le patrimoine culturel peut être pris pour cible afin d'effacer l'identité d'un peuple ou être pillé pour financer des groupes armés. Ce comité cherche des solutions concrètes pour sécuriser les sites historiques, lutter contre le trafic illicite d'œuvres d'art et préparer la reconstruction culturelle. Les délégués devront également aborder la protection des écoles et la continuité de l'éducation en temps de guerre."},
+    {"lang":"EN","title":"","institution":"","type":"","issue":"How can cultural heritage be protected in territories affected by armed conflicts?","overview":"In modern conflicts, cultural heritage is often targeted in attempts to erase a community's identity, or looted to finance armed groups. This committee seeks practical solutions to protect historical sites, combat the illicit trafficking of cultural artifacts and support cultural reconstruction. Delegates will also address the protection of schools and the continuity of education during wartime."}]},
+  {"id":"parlement-europeen","number":"05","emblem":"","status":"","versions":[{"lang":"FR","title":"PARLEMENT EUROPÉEN — Les soulèvements en Europe : jeunesse, éducation et contestation","institution":"Parlement européen","type":"Politique, social et institutionnel","issue":"La multiplication des mouvements de contestation en Europe révèle-t-elle une crise de la démocratie représentative ?","overview":"Face à l'inflation, à l'urgence climatique et aux réformes de l'éducation, la jeunesse européenne descend massivement dans la rue, parfois en marge des syndicats et des partis traditionnels. Les eurodéputés analyseront ce phénomène afin de déterminer si les institutions actuelles répondent encore aux attentes des citoyens. L'objectif sera de proposer des réformes permettant de mieux inclure les jeunes dans la prise de décision européenne et de répondre à leur sentiment de déclassement."}]},
+  {"id":"comite-de-crise","number":"06","emblem":"","status":"provisoire","versions":[{"lang":"FR","title":"COMITÉ DE CRISE","institution":"À confirmer","type":"Comité de crise","issue":"Problématique à compléter dès que le scénario officiel sera arrêté.","overview":"Ce comité repose sur une simulation évolutive dans laquelle les participants doivent analyser les informations communiquées, réagir à des événements successifs, prendre des décisions et adapter leur stratégie. Il met l'accent sur la réactivité, la coordination, la négociation et la prise de décision en situation d'incertitude."}]},
+  {"id":"proces-colomb","number":"07","emblem":"","status":"","versions":[{"lang":"FR","title":"PROCÈS HISTORIQUE — Le procès de Christophe Colomb","institution":"Tribunal royal espagnol fictif du début du XVIe siècle","type":"Procès historique","issue":"Christophe Colomb doit-il répondre de ses décisions et des abus commis sous son autorité dans les territoires colonisés ?","overview":"Convoqué devant un tribunal royal espagnol exceptionnel, Christophe Colomb doit répondre de sa gestion brutale des premières colonies aux Amériques. L'accusation lui reproche les violences infligées aux populations autochtones, l'instauration de l'esclavage et les abus de pouvoir envers les colons espagnols. Ce procès interroge la légitimité morale de la conquête et pose les bases des premiers débats sur les droits des peuples colonisés."}]},
+  {"id":"interpol","number":"08","emblem":"","status":"","versions":[{"lang":"EN","title":"GENERAL ASSEMBLY — INTERPOL","institution":"General Assembly — INTERPOL","type":"International security and police cooperation committee","issue":"Reforming International Police Cooperation in the Face of Politicized Law Enforcement, Transnational Crime, and State Abuse.","overview":"This committee examines the challenges facing international police cooperation in an increasingly complex global security environment. Delegates will address the politicization of law enforcement, the misuse of international policing mechanisms, transnational crime and state abuse. They will explore ways to strengthen cooperation between member states while safeguarding INTERPOL's neutrality, preventing political exploitation and ensuring respect for fundamental rights. Discussions will focus on balancing international security, national sovereignty and accountability."}]},
+  {"id":"unsc-taiwan","number":"09","emblem":"","status":"","versions":[{"lang":"EN","title":"UNITED NATIONS SECURITY COUNCIL — THE TAIWAN STRAIT","institution":"United Nations Security Council (UNSC)","type":"Geopolitical and international security committee","issue":"How can the international community prevent escalating tensions in the Taiwan Strait from threatening regional peace?","overview":"This committee places delegates at the center of rising geopolitical tensions in the Taiwan Strait and the potential consequences for regional and international stability. Participants will examine the strategic interests of the actors involved, the security implications of escalating tensions and the risks of a wider confrontation. Through diplomatic negotiations and strategic discussions, delegates will explore measures to prevent further escalation, preserve regional stability and protect international peace."}]}
+ ],
+ "news":[{"id":"mun-in-between-2026","date":"2026-11-23","title":"MUN IN BETWEEN : la Grande Assemblée arrive","cover":"","summary":"La 7e édition de la Grande Assemblée du TIMUN ISC se tiendra les 17, 18 et 19 décembre 2026.","body":["La 7e édition de la Grande Assemblée du TIMUN ISC, intitulée MUN IN BETWEEN, se tiendra les 17, 18 et 19 décembre 2026.","Neuf comités, des élèves de différents établissements et trois journées de débats et d'échanges attendent les participants."],"gallery":[],"pdf":""}],
+ "partners":{"institutional":[],"event":[],"sponsors":[]},
+ "contact":{"intro":"Have a question about TIMUN ISC, our activities or our upcoming events? We would be delighted to hear from you. Feel free to contact us through our official channels.","address":""},
+ "gallery":[]
+}
+</script>
+
+<script>
+(function () {
+  "use strict";
+  const $ = (s) => document.querySelector(s);
+  const KEY = "timun-isc-site-v1";
+  const EMBEDDED = JSON.parse($("#site-data").textContent);
+  let DATA = null;
+  try { DATA = JSON.parse(localStorage.getItem(KEY)); } catch (e) {}
+  if (!DATA || (EMBEDDED.savedAt || 0) > (DATA.savedAt || 0)) DATA = JSON.parse(JSON.stringify(EMBEDDED));
+  if (!DATA) DATA = JSON.parse(JSON.stringify(EMBEDDED));
+  DATA.comitesIntro = DATA.comitesIntro || { text: "", photo: "" };
+
+  const PUBLIC = document.body.dataset.public === "1";
+  let EDIT = false;
+  let pendingPath = null;
+
+  const PAGES = [
+    ["accueil", "Accueil"], ["qui-sommes-nous", "Qui sommes-nous ?"], ["le-club", "Le Club"],
+    ["ressources", "Ressources"], ["grande-assemblee", "MUN IN BETWEEN"], ["comites", "Nos Comités"],
+    ["actualites", "Actualités"], ["partenaires", "Nos Partenaires"], ["contact", "Contact"]
+  ];
+
+  const TPL = {
+    str: () => "",
+    news: () => ({ id: "article-" + Date.now(), date: new Date().toISOString().slice(0, 10), title: "", cover: "", summary: "", body: [], gallery: [], pdf: "" }),
+    gallery: () => ({ src: "", caption: "" }),
+    board: () => ({ photo: "", name: "", role: "", bio: "" }),
+    team: () => ({ name: "", text: "" }),
+    timeline: () => ({ date: "", text: "" }),
+    value: () => ({ name: "", text: "" }),
+    partner: () => ({ name: "", logo: "", description: "", url: "" })
+  };
+
+  /* ---------- utilitaires ---------- */
+  const esc = (v) => String(v == null ? "" : v).replace(/[&<>"']/g, (c) =>
+    ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+  const get = (p) => p.split(".").reduce((o, k) => (o == null ? undefined : o[k]), DATA);
+  function set(p, v) {
+    const k = p.split(".");
+    const last = k.pop();
+    const o = k.reduce((x, y) => x[y], DATA);
+    o[last] = v;
+    save();
+  }
+  function save() {
+    try {
+      DATA.savedAt = Date.now();
+      localStorage.setItem(KEY, JSON.stringify(DATA));
+      flash("✔ Modifications enregistrées");
+    } catch (e) {
+      flash("⚠ Mémoire du navigateur pleine : téléchargez le site final puis retirez les photos ou PDF les plus lourds.", true);
+    }
+  }
+  let toastTimer;
+  function flash(msg, err) {
+    const el = $("#toast");
+    el.textContent = msg;
+    el.className = "toast" + (err ? " err" : "");
+    el.style.display = "block";
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => (el.style.display = "none"), 3200);
+  }
+  const fmtDate = (iso) => (iso ? new Date(iso + "T00:00:00").toLocaleDateString("fr-FR", { day: "numeric", month: "long", year: "numeric" }) : "");
+  const sortedNews = () => [...DATA.news].sort((a, b) => (a.date < b.date ? 1 : -1));
+
+  /* ---------- briques d'édition ---------- */
+  // Texte modifiable
+  function t(p, tag = "span", cls = "", fb = "") {
+    const v = get(p) || "";
+    if (!EDIT) {
+      if (v) return `<${tag} class="${cls}">${esc(v)}</${tag}>`;
+      return fb ? `<${tag} class="${cls} muted">${esc(fb)}</${tag}>` : "";
+    }
+    return `<${tag} class="${cls}" data-path="${p}" data-edit contenteditable="true" data-ph="${esc(fb || "Cliquer pour écrire…")}">${esc(v)}</${tag}>`;
+  }
+  // Liste de paragraphes modifiables
+  function strs(p, cls = "") {
+    const arr = get(p) || [];
+    if (!EDIT && !arr.length) return "";
+    const body = arr.map((s, i) => EDIT
+      ? `<div class="pline"><p class="${cls}" data-path="${p}.${i}" data-edit contenteditable="true" data-ph="Paragraphe…">${esc(s)}</p><button class="del" data-act="del" data-path="${p}" data-idx="${i}" title="Supprimer">✕</button></div>`
+      : `<p class="${cls}">${esc(s)}</p>`).join("");
+    return body + addBtn(p, "str", "un paragraphe");
+  }
+  // Date
+  function dateF(p) {
+    const v = get(p) || "";
+    if (!EDIT) return v ? `<time>${fmtDate(v)}</time>` : "";
+    return `<input type="date" class="dinput" data-path="${p}" value="${esc(v)}">`;
+  }
+  // Bouton d'ajout
+  const addBtn = (p, tpl, label) => (EDIT ? `<button class="addbtn" data-act="add" data-path="${p}" data-tpl="${tpl}">+ Ajouter ${label}</button>` : "");
+  // Éléments d'une liste d'objets (fn reçoit l'index et renvoie le HTML)
+  function items(p, fn, cls = "card", tag = "div") {
+    const arr = get(p) || [];
+    return arr.map((_, i) => `<${tag} class="item ${cls}">${fn(i)}${EDIT
+      ? `<button class="del" data-act="del" data-path="${p}" data-idx="${i}">Supprimer</button>` : ""}</${tag}>`).join("");
+  }
+  // Image modifiable (bouton « changer » en mode édition)
+  function ctl(p, label) {
+    if (!EDIT) return "";
+    const has = !!get(p);
+    return `<div class="ctl"><button data-act="img-link" data-path="${p}">🔗 Lien</button><button data-act="img" data-path="${p}">📷 ${has ? "Changer" : "Ajouter"} ${label}</button>${has ? `<button data-act="img-clear" data-path="${p}">✕</button>` : ""}</div>`;
+  }
+  function img(p, alt, cls = "", label = "la photo") {
+    const src = get(p);
+    return `<div class="media ${cls} ${src ? "" : "empty"}">${src ? `<img src="${src}" alt="${esc(alt)}" loading="lazy">` : ""}<span class="ph">${esc(alt || "Image à venir")}</span>${ctl(p, label)}</div>`;
+  }
+  // PDF : téléverser, coller un lien, retirer
+  function pdfBlock(p, label) {
+    const v = get(p);
+    const dl = v ? `<a class="btn btn-gold" href="${v}" target="_blank" rel="noopener" download>Télécharger le PDF</a>` : "";
+    if (!EDIT) return v ? `<p class="center">${dl}</p>` : "";
+    return `<div class="pdfbox">${dl}
+      <button data-act="pdf" data-path="${p}">📄 ${v ? "Remplacer" : "Importer"} un PDF</button>
+      <button data-act="pdf-link" data-path="${p}">🔗 Coller un lien</button>
+      ${v ? `<button data-act="pdf-clear" data-path="${p}">Retirer le PDF</button>` : ""}
+      <small>${esc(label)}</small></div>`;
+  }
+  // Galerie
+  function gallery(p) {
+    const arr = get(p) || [];
+    if (!EDIT && !arr.length) return "";
+    const inner = arr.map((g, i) => `<figure class="item">${img(`${p}.${i}.src`, g.caption, "gal", "la photo")}
+      ${EDIT ? `<figcaption>${t(`${p}.${i}.caption`, "span", "", "Légende")}</figcaption>` : g.caption ? `<figcaption>${esc(g.caption)}</figcaption>` : ""}
+      ${EDIT ? `<button class="del" data-act="del" data-path="${p}" data-idx="${i}">Supprimer</button>` : ""}</figure>`).join("");
+    return `<div class="gallery">${inner}</div>${addBtn(p, "gallery", "une photo")}`;
+  }
+  function fld(p, label, tag = "p", cls = "") {
+    if (!EDIT && !get(p)) return "";
+    return `<span class="lbl-s">${label}</span>${t(p, tag, cls)}`;
+  }
+
+  /* ---------- en-tête, pied, barre d'outils ---------- */
+  function renderHeader() {
+    $("#hdr").innerHTML = `<div class="nav-inner">
+      <a class="brand" href="#accueil">${img("site.logo", "Logo", "", "le logo")}${t("site.name", "span", "brand-name")}</a>
+      <button class="menu-toggle" aria-label="Menu">☰</button>
+      <nav class="main-nav" id="nav">${PAGES.map(([k, l]) => `<a href="#${k}" data-key="${k}">${l}</a>`).join("")}</nav>
+    </div>`;
+    $(".menu-toggle").onclick = () => $("#nav").classList.toggle("open");
+  }
+  function renderFooter() {
+    const s = DATA.site;
+    $("#ftr").innerHTML = `<div class="footer-inner">
+      <div><strong>${esc(s.name)}</strong>${t("site.footerText", "p")}<p class="muted">${esc(s.school)}</p></div>
+      <div><p class="footer-title">Liens rapides</p>${PAGES.map(([k, l]) => `<a href="#${k}">${l}</a>`).join("<br>")}</div>
+      <div><p class="footer-title">Contact</p>
+        <p><a href="${esc(s.instagramUrl)}" target="_blank" rel="noopener">Instagram ${esc(s.instagram)}</a></p>
+        ${s.email ? `<p><a href="mailto:${esc(s.email)}">${esc(s.email)}</a></p>` : ""}
+        ${EDIT ? `<p>${t("site.email", "span", "", "adresse e-mail officielle")}</p>` : ""}
+      </div></div>
+      <div class="footer-bottom">© ${new Date().getFullYear()} ${esc(s.name)} — ${esc(s.school)}</div>`;
+  }
+  function renderBar() {
+    const bar = $("#bar");
+    if (PUBLIC) { bar.style.display = "none"; $("#note").innerHTML = ""; return; }
+    if (!EDIT) {
+      bar.innerHTML = `<button class="on" data-act="toggle-edit">✏️ Modifier le site</button>
+        <span class="hint">Mode visiteur — cliquez pour modifier textes, photos et PDF.</span>`;
+    } else {
+      bar.innerHTML = `<button class="on" data-act="toggle-edit">👁 Voir le site</button>
+        <button data-act="export">⬇ Télécharger le site final (HTML, modifiable)</button>
+        <button data-act="export-public">🌐 Version publique (sans modification)</button>
+        <button data-act="copy-final">📋 Copier le code (plan B)</button>
+        <button data-act="copy-public">📋 Copier la version publique (plan B)</button>
+        <button data-act="backup">💾 Sauvegarde (JSON)</button>
+        <button data-act="restore">📂 Restaurer une sauvegarde</button>
+        <button data-act="reset">↺ Réinitialiser</button>
+        <span class="hint">Cliquez sur un texte pour l'écrire · survolez une photo pour la changer.</span>`;
+    }
+    $("#note").innerHTML = EDIT ? `<div class="editnote">Mode édition activé — vos modifications sont enregistrées automatiquement dans ce navigateur.</div>` : "";
+  }
+
+  /* ---------- pages ---------- */
+  function pHome() {
+    const h = DATA.home;
+    const featured = sortedNews().slice(0, h.featuredCount || 3);
+    const statsShown = EDIT ? h.stats.map((_, i) => i) : h.stats.map((s, i) => (s.visible ? i : -1)).filter((i) => i >= 0);
+    return `
+    <section class="hero">
+      <div class="hero-bg" style="background-image:url('${get("site.heroImage") || ""}')"></div>
+      ${ctl("site.heroImage", "la bannière")}
+      <div class="hero-inner">
+        ${t("home.kicker", "p", "eyebrow")}
+        <h1>${t("site.name", "span")}</h1>
+        ${t("home.tagline", "p", "tagline")}
+        ${t("home.intro", "p", "lead")}
+        <div class="cta">
+          <a class="btn" href="#qui-sommes-nous">DISCOVER TIMUN ISC</a>
+          <a class="btn btn-gold" href="#grande-assemblee">OUR GRAND ASSEMBLY</a>
+        </div>
+      </div>
+    </section>
+    <section class="section"><div class="container two-col">
+      <div>${t("home.welcomeTitle", "h2")}<div class="prose">${strs("home.welcome")}</div></div>
+      <div class="stats">${statsShown.map((i) => {
+        const s = DATA.home.stats[i];
+        return `<div class="stat"><span class="stat-value">${t(`home.stats.${i}.value`, "span", "", "0")}</span>
+          <span class="stat-label">${t(`home.stats.${i}.label`, "span")}</span>
+          ${EDIT ? `<label class="small"><input type="checkbox" data-path="home.stats.${i}.visible" ${s.visible ? "checked" : ""}> Afficher</label>` : ""}</div>`;
+      }).join("")}</div>
+    </div></section>
+    ${featured.length || EDIT ? `<section class="section section-alt"><div class="container">
+      <h2 class="section-title">À la une</h2>
+      <div class="cards">${featured.map(newsCard).join("")}</div>
+    </div></section>` : ""}
+    <section class="section"><div class="container">
+      <h2 class="section-title">Découvrir nos comités</h2>
+      <p class="center muted">Neuf comités, neuf sujets. Les détails de chacun sont sur la page « Nos Comités ».</p>
+      <div class="chips">${DATA.committees.map((c) => `<a class="chip" href="#comites"><b>${esc(c.number)}</b> ${esc((c.versions[0].title || "").split(" — ")[0])}</a>`).join("")}</div>
+      <p class="center"><a class="btn" href="#comites">EXPLORE OUR COMMITTEES</a></p>
+    </div></section>
+    ${DATA.gallery.length || EDIT ? `<section class="section section-alt"><div class="container">
+      <h2 class="section-title">En images</h2>${gallery("gallery")}</div></section>` : ""}`;
+  }
+
+  function pAbout() {
+    const a = DATA.about;
+    return `
+    <header class="page-header"><p class="eyebrow">Qui sommes-nous ?</p><h1>Le TIMUN ISC</h1></header>
+    <section class="section"><div class="container narrow">${strs("about.presentation")}</div></section>
+    <section class="section section-alt"><div class="container">
+      <h2 class="section-title">Notre histoire</h2>
+      <div class="narrow"><ol class="timeline">${items("about.timeline", (i) => `
+        <span class="tl-date">${t(`about.timeline.${i}.date`)}</span>${t(`about.timeline.${i}.text`, "span")}`, "", "li")}</ol>
+        ${addBtn("about.timeline", "timeline", "une étape")}</div>
+    </div></section>
+    <section class="section"><div class="container two-col">
+      <div><h2>Notre mission</h2>${t("about.mission", "p", "lead-text")}</div>
+      <div><h2>Nos objectifs</h2>${strs("about.objectives", "check")}</div>
+    </div></section>
+    <section class="section section-alt"><div class="container">
+      <h2 class="section-title">Nos valeurs</h2>
+      <div class="cards cards-5">${items("about.values", (i) => `<h3>${t(`about.values.${i}.name`)}</h3>${t(`about.values.${i}.text`, "p")}`, "card value-card")}</div>
+      ${addBtn("about.values", "value", "une valeur")}
+      ${addBtn("about.values", "value", "une valeur")}
+    </div></section>
+    <section class="section"><div class="container narrow">
+      ${t("about.munTitle", "h2")}<div class="prose">${strs("about.mun")}</div>
+    </div></section>`;
+  }
+
+  function pClub() {
+    const c = DATA.club;
+    return `
+    <header class="page-header"><p class="eyebrow">Le Club</p><h1>Fonctionnement, bureau et membres</h1></header>
+    <section class="section"><div class="container narrow">${strs("club.functioning")}</div></section>
+    <section class="section section-alt"><div class="container">
+      <h2 class="section-title">Le bureau — Executive Board</h2>
+      ${c.board.length || EDIT ? `<div class="cards">${items("club.board", (i) => `
+        <div class="person">${img(`club.board.${i}.photo`, "Photo", "", "la photo")}
+        ${t(`club.board.${i}.name`, "h3")}${t(`club.board.${i}.role`, "p", "role")}${t(`club.board.${i}.bio`, "p", "txt")}</div>`)}</div>
+        ${addBtn("club.board", "board", "un membre du bureau")}`
+        : `<p class="center muted">${esc(c.boardEmpty)}</p>`}
+    </div></section>
+    ${c.teams.length || EDIT ? `<section class="section"><div class="container">
+      <h2 class="section-title">Les membres et les équipes</h2>
+      <div class="cards cards-4">${items("club.teams", (i) => `${t(`club.teams.${i}.name`, "h3")}${t(`club.teams.${i}.text`, "p")}`)}</div>
+      ${addBtn("club.teams", "team", "un pôle")}</div></section>` : ""}
+    <section class="section section-alt"><div class="container narrow">
+      <h2>Rejoindre le club</h2>
+      ${t("club.recruitText", "p")}${t("club.recruitContact", "p")}
+      ${get("club.formUrl") || EDIT ? `<p>${t("club.formUrl", "span", "small", "Lien du formulaire de candidature (https://…)")}</p>` : ""}
+      ${get("club.formUrl") && !EDIT ? `<p class="center"><a class="btn" href="${esc(get("club.formUrl"))}" target="_blank" rel="noopener">Formulaire de candidature</a></p>` : ""}
+    </div></section>`;
+  }
+
+  function resourceCard(r) {
+    return `<a class="card resource-card" href="#ressources/${esc(r.id)}">
+      <span class="res-num">${esc(r.number)}</span><h3>${esc(r.title)}</h3><p>${esc(r.summary)}</p>
+      <span class="link-more">Lire la ressource →</span></a>`;
+  }
+  const PADLET_URL = "https://padlet.com/khdijabensassi4/timun-isc-s02593h4u6d3sm1obkl1";
+  function pResources() {
+    return `<header class="page-header"><p class="eyebrow">Ressources</p><h1>Ressources pédagogiques</h1>
+      <p class="sub">Toutes les ressources du TIMUN ISC sont rassemblées sur notre Padlet.</p></header>
+      <section class="section"><div class="container narrow center">
+        <p class="lead-text">Retrouvez l'ensemble des contenus pédagogiques destinés aux délégués sur le Padlet officiel du club.</p>
+        <p><a class="btn btn-gold" href="${PADLET_URL}" target="_blank" rel="noopener">OUVRIR LE PADLET DES RESSOURCES</a></p>
+      </div></section>`;
+  }
+  function pResource(id) {
+    const i = DATA.resources.findIndex((r) => r.id === id);
+    if (i < 0) return pNotFound();
+    const r = DATA.resources[i];
+    return `<header class="page-header"><p class="eyebrow"><a href="#ressources">← Ressources</a></p>
+      <h1>${esc(r.number)} — ${esc(r.title)}</h1></header>
+      <section class="section"><div class="container narrow">
+        ${t(`resources.${i}.intro`, "p", "lead-text")}
+        <div class="box">${strs(`resources.${i}.body`) || `<p class="muted">Le contenu détaillé de cette ressource est en cours de rédaction.</p>`}</div>
+        ${pdfBlock(`resources.${i}.pdf`, "Glissez ici le PDF de la ressource (ou collez un lien).")}
+      </div></section>`;
+  }
+
+  function pGA() {
+    const g = DATA.ga;
+    const p = g.practical;
+    const venue = (v) => (v ? esc(v) : `<span class="muted">À préciser</span>`);
+    return `
+    <section class="ga-banner">
+      ${img("ga.poster", "Affiche de l'édition", "ga-poster", "l'affiche")}
+      <div>
+        ${t("ga.editionLabel", "p", "eyebrow")}
+        ${t("ga.edition", "h1")}
+        ${t("ga.dates", "p", "dates")}
+      </div>
+    </section>
+    <section class="section"><div class="container narrow">${strs("ga.presentation")}</div></section>
+    <section class="section section-alt"><div class="container">
+      <h2 class="section-title">Les trois journées</h2>
+      <div class="cards cards-3">${items("ga.days", (i) => `<span class="day-date">${t(`ga.days.${i}.date`)}</span>
+        ${t(`ga.days.${i}.title`, "h3")}${t(`ga.days.${i}.text`, "p")}`, "card day-card")}</div>
+    </div></section>
+    <section class="section"><div class="container narrow">
+      <h2>Informations pratiques</h2>
+      <ul class="info-list">
+        <li><span class="lbl">Dates :</span>${t("ga.practical.dates", "span")}</li>
+        <li><span class="lbl">Public :</span>${t("ga.practical.public", "span")}</li>
+        <li><span class="lbl">Cérémonie d'ouverture :</span>${EDIT ? t("ga.practical.openingVenue", "span", "", "lieu à préciser") : venue(p.openingVenue)}</li>
+        <li><span class="lbl">Sessions :</span>${EDIT ? t("ga.practical.sessionsVenue", "span", "", "lieu à préciser") : venue(p.sessionsVenue)}</li>
+        <li><span class="lbl">Contact :</span><a href="#contact">Adresse e-mail officielle</a> et <a href="${esc(DATA.site.instagramUrl)}" target="_blank" rel="noopener">Instagram ${esc(DATA.site.instagram)}</a></li>
+      </ul>
+      ${EDIT ? `<p>${t("ga.practical.registrationUrl", "span", "small", "Lien d'inscription (https://…)")}</p>` : ""}
+      <div class="cta">
+        ${p.registrationUrl && !EDIT ? `<a class="btn" href="${esc(p.registrationUrl)}" target="_blank" rel="noopener">S'inscrire</a>` : ""}
+      </div>
+      ${pdfBlock("ga.practical.programmePdf", "Programme détaillé (PDF), à ajouter lorsqu'il est validé.")}
+    </div></section>
+    <section class="section section-alt"><div class="container">
+      <h2 class="section-title">Galerie</h2>
+      ${(g.gallery.length || EDIT) ? gallery("ga.gallery") : `<p class="center muted">La galerie des éditions précédentes sera bientôt disponible.</p>`}
+    </div></section>`;
+  }
+
+  function committeeBlock(c, i) {
+    return `<article class="committee" id="comite-${esc(c.id)}">
+      <div>${img(`committees.${i}.emblem`, "Emblème du comité " + c.number, "emblem", "l'emblème")}</div>
+      <div>
+        ${c.versions.map((v, j) => {
+          const base = `committees.${i}.versions.${j}`;
+          return `<div class="${j > 0 ? "version-sep" : ""}">
+            ${v.lang ? `<span class="lang-tag">${esc(v.lang)}</span>` : ""}
+            ${j === 0 ? `<p class="com-num">COMMITTEE ${t(`committees.${i}.number`)} ${t(`committees.${i}.status`, "span", "badge")}</p>` : ""}
+            ${t(`${base}.title`, "h2")}
+            ${fld(`${base}.institution`, "INSTITUTION :", "p", "meta")}
+            ${fld(`${base}.type`, "TYPE :", "p", "meta")}
+            ${fld(`${base}.issue`, "PROBLÉMATIQUE / ISSUE", "p", "issue")}
+            ${fld(`${base}.overview`, "RÉSUMÉ / OVERVIEW", "p", "")}
+          </div>`;
+        }).join("")}
+      </div></article>`;
+  }
+  function pCommittees() {
+    return `<header class="page-header"><p class="eyebrow">Grande Assemblée</p><h1>OUR COMMITTEES</h1>
+      <p class="sub">TIMUN ISC GRAND ASSEMBLY — Nine committees. Different perspectives. One global dialogue.</p></header>
+      <section class="section"><div class="container narrow center intro-com">
+        <div class="intro-com-text">${t("comitesIntro.text", "p", "lead-text")}</div>
+        
+      </div></section>
+      <section class="section"><div class="container">${DATA.committees.map(committeeBlock).join("")}</div></section>`;
+  }
+
+  function newsCard(n) {
+    const i = DATA.news.findIndex((x) => x.id === n.id);
+    const inner = `${img(`news.${i}.cover`, n.title, "cover", "l'image de couverture")}
+      <div class="news-body">${dateF(`news.${i}.date`) || ""}
+        ${t(`news.${i}.title`, "h3")}${t(`news.${i}.summary`, "p")}
+        ${EDIT ? "" : `<span class="link-more">Read More →</span>`}
+        ${EDIT ? `<a class="link-more" href="#actualites/${esc(n.id)}">Ouvrir l'article →</a>` : ""}
+      </div>`;
+    return EDIT
+      ? `<div class="card news-card item">${inner}<button class="del" data-act="del" data-path="news" data-idx="${i}">Supprimer</button></div>`
+      : `<a class="card news-card" href="#actualites/${esc(n.id)}">${inner}</a>`;
+  }
+  function pNews() {
+    const list = sortedNews();
+    return `<header class="page-header"><p class="eyebrow">Actualités</p><h1>Le journal du TIMUN ISC</h1></header>
+      <section class="section"><div class="container">
+        <div class="cards">${list.map(newsCard).join("")}</div>
+        ${addBtn("news", "news", "une publication")}
+        ${!list.length && !EDIT ? `<p class="center muted">Aucune publication pour le moment.</p>` : ""}
+      </div></section>`;
+  }
+  function pArticle(id) {
+    const i = DATA.news.findIndex((x) => x.id === id);
+    if (i < 0) return pNotFound();
+    const n = DATA.news[i];
+    return `<header class="page-header"><p class="eyebrow"><a href="#actualites">← Actualités</a></p>
+      ${t(`news.${i}.title`, "h1")}${dateF(`news.${i}.date`)}</header>
+      <section class="section"><div class="container narrow">
+        ${img(`news.${i}.cover`, n.title, "article-cover", "l'image de couverture")}
+        ${t(`news.${i}.summary`, "p", "lead-text")}
+        <div class="prose">${strs(`news.${i}.body`)}</div>
+        ${(n.gallery.length || EDIT) ? `<h2>Galerie</h2>${gallery(`news.${i}.gallery`)}` : ""}
+        ${pdfBlock(`news.${i}.pdf`, "Document lié à cette publication (PDF).")}
+      </div></section>`;
+  }
+
+  function pPartners() {
+    const cats = [["event", "Event Partners"], ["sponsors", "Sponsors"]];
+    const shown = cats.filter(([k]) => DATA.partners[k].length || EDIT);
+    return `<header class="page-header"><p class="eyebrow">Nos Partenaires</p><h1>Our Partners</h1></header>
+      <section class="section"><div class="container narrow center">
+        <p>The TIMUN ISC is proud to collaborate with institutions, organizations and companies that support our initiatives and contribute to the development of our activities. These partnerships play an important role in making our projects and events possible.</p>
+      </div></section>
+      ${shown.length ? shown.map(([k, title], n) => `<section class="section ${n % 2 ? "section-alt" : ""}"><div class="container">
+        <h2 class="section-title">${title}</h2>
+        <div class="cards cards-3">${items(`partners.${k}`, (i) => `<div class="partner">
+          ${img(`partners.${k}.${i}.logo`, "Logo", "logo", "le logo")}
+          ${t(`partners.${k}.${i}.name`, "h3")}${t(`partners.${k}.${i}.description`, "p")}
+          ${EDIT ? `<p>${t(`partners.${k}.${i}.url`, "span", "small", "Site web (https://…)")}</p>` : (DATA.partners[k][i].url ? `<a href="${esc(DATA.partners[k][i].url)}" target="_blank" rel="noopener">Visiter le site</a>` : "")}
+        </div>`)}</div>
+        ${addBtn(`partners.${k}`, "partner", "un partenaire")}
+      </div></section>`).join("") : `<section class="section"><p class="center muted">Nos partenaires seront présentés prochainement.</p></section>`}`;
+  }
+
+  function pContact() {
+    const s = DATA.site;
+    return `<header class="page-header"><p class="eyebrow">Contact</p><h1>Get in Touch</h1></header>
+      <section class="section"><div class="container two-col">
+        <div>
+          ${t("contact.intro", "p", "lead-text")}
+          <ul class="info-list">
+            <li><span class="lbl">Instagram :</span><a href="${esc(s.instagramUrl)}" target="_blank" rel="noopener">${esc(s.instagram)}</a></li>
+            <li><span class="lbl">E-mail :</span>${EDIT ? t("site.email", "span", "", "adresse e-mail officielle") : (s.email ? `<a href="mailto:${esc(s.email)}">${esc(s.email)}</a>` : "à venir")}</li>
+            <li><span class="lbl">Établissement :</span>${esc(s.school)}</li>
+            ${(DATA.contact.address || EDIT) ? `<li><span class="lbl">Adresse :</span>${t("contact.address", "span", "", "adresse publique (facultatif)")}</li>` : ""}
+          </ul>
+        </div>
+        <form class="contact-form" id="contact-form">
+          <label>Full name<input name="name" required></label>
+          <label>Email address<input name="email" type="email" required></label>
+          <label>Subject<input name="subject" required></label>
+          <label>Message<textarea name="message" rows="6" required></textarea></label>
+          <button class="btn" type="submit">Send Message</button>
+          <p class="form-status" id="form-status" role="status"></p>
+        </form>
+      </div></section>`;
+  }
+
+  function pNotFound() {
+    return `<section class="section"><div class="container center"><h1>Page introuvable</h1>
+      <p><a class="btn" href="#accueil">Retour à l'accueil</a></p></div></section>`;
+  }
+
+  /* ---------- rendu ---------- */
+  const ROUTES = {
+    "accueil": pHome, "qui-sommes-nous": pAbout, "le-club": pClub, "ressources": pResources,
+    "grande-assemblee": pGA, "comites": pCommittees, "actualites": pNews, "partenaires": pPartners, "contact": pContact
+  };
+
+  function renderPage() {
+    const raw = decodeURIComponent(location.hash.replace(/^#/, "")) || "accueil";
+    const [page, id] = raw.split("/");
+    let html, key = page;
+    if (page === "ressources" && id) html = pResource(id);
+    else if (page === "actualites" && id) html = pArticle(id);
+    else if (ROUTES[page]) html = ROUTES[page]();
+    else { html = pNotFound(); key = "accueil"; }
+    $("#app").innerHTML = html;
+    document.querySelectorAll(".main-nav a").forEach((a) => a.classList.toggle("active", a.dataset.key === key));
+    bindContact();
+  }
+  function render() {
+    renderHeader();
+    renderFooter();
+    renderPage();
+    renderBar();
+    document.body.classList.toggle("editing", EDIT);
+  }
+
+  function bindContact() {
+    const form = $("#contact-form");
+    if (!form) return;
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const st = $("#form-status");
+      const data = Object.fromEntries(new FormData(form).entries());
+      const endpoint = DATA.site.contactFormEndpoint;
+      if (endpoint) {
+        try {
+          const res = await fetch(endpoint, { method: "POST", headers: { "Content-Type": "application/json", Accept: "application/json" }, body: JSON.stringify(data) });
+          if (!res.ok) throw new Error();
+          st.textContent = "Merci ! Votre message a bien été envoyé.";
+          form.reset();
+        } catch (err) {
+          st.textContent = "Une erreur est survenue. Merci de réessayer.";
+        }
+      } else if (DATA.site.email) {
+        const subject = encodeURIComponent("[Site TIMUN ISC] " + data.subject);
+        const body = encodeURIComponent(data.message + "\n\n— " + data.name + " (" + data.email + ")");
+        location.href = "mailto:" + DATA.site.email + "?subject=" + subject + "&body=" + body;
+        st.textContent = "Votre application e-mail va s'ouvrir avec le message prérempli.";
+      } else {
+        st.textContent = "Le formulaire n'est pas encore relié à une adresse e-mail.";
+      }
+    });
+  }
+
+  /* ---------- lecture / conversion des images et PDF ---------- */
+  function compressImage(file, maxW = 1000) {
+    return new Promise((resolve, reject) => {
+      const r = new FileReader();
+      r.onload = () => {
+        const im = new Image();
+        im.onload = () => {
+          const s = Math.min(1, maxW / im.width);
+          const c = document.createElement("canvas");
+          c.width = Math.round(im.width * s);
+          c.height = Math.round(im.height * s);
+          const x = c.getContext("2d");
+          const png = false;
+          if (!png) { x.fillStyle = "#fff"; x.fillRect(0, 0, c.width, c.height); }
+          x.drawImage(im, 0, 0, c.width, c.height);
+          resolve(c.toDataURL("image/jpeg", 0.75));
+        };
+        im.onerror = reject;
+        im.src = r.result;
+      };
+      r.onerror = reject;
+      r.readAsDataURL(file);
+    });
+  }
+  function readFile(file) {
+    return new Promise((resolve, reject) => {
+      const r = new FileReader();
+      r.onload = () => resolve(r.result);
+      r.onerror = reject;
+      r.readAsDataURL(file);
+    });
+  }
+
+  /* ---------- actions (clics) ---------- */
+  document.addEventListener("click", (e) => {
+    // Pendant l'édition, un texte cliqué dans un lien ne doit pas ouvrir la page
+    if (EDIT && e.target.closest("[data-edit]") && e.target.closest("a")) e.preventDefault();
+
+    const btn = e.target.closest("[data-act]");
+    if (!btn) return;
+    const act = btn.dataset.act;
+    const p = btn.dataset.path;
+
+    if (act === "toggle-edit") { if (PUBLIC) return; EDIT = !EDIT; render(); return; }
+    if (act === "img") { pendingPath = p; $("#fImg").value = ""; $("#fImg").click(); return; }
+    if (act === "img-link") { const url = prompt("Collez le lien direct de la photo (ex. https://…/photo.jpg) :", get(p) || "https://"); if (url && url.trim() && url.trim() !== "https://") { set(p, url.trim()); render(); } return; }
+    if (act === "img-clear") { set(p, ""); render(); return; }
+    if (act === "pdf") { pendingPath = p; $("#fPdf").value = ""; $("#fPdf").click(); return; }
+    if (act === "pdf-clear") { set(p, ""); render(); return; }
+    if (act === "pdf-link") {
+      const url = prompt("Collez le lien du PDF (Google Drive, Dropbox, site officiel…) :", get(p) || "https://");
+      if (url && url.trim() && url.trim() !== "https://") { set(p, url.trim()); render(); }
+      return;
+    }
+    if (act === "add") {
+      const arr = get(p) || [];
+      const make = TPL[btn.dataset.tpl] || TPL.str;
+      arr.push(make());
+      save();
+      render();
+      return;
+    }
+    if (act === "del") {
+      if (!confirm("Supprimer cet élément ?")) return;
+      const arr = get(p);
+      arr.splice(Number(btn.dataset.idx), 1);
+      save();
+      render();
+      return;
+    }
+    if (act === "export") { exportSite(false); return; }
+    if (act === "export-public") { exportSite(true); return; }
+    if (act === "copy-final") { exportSite(false, true); return; }
+    if (act === "copy-public") { exportSite(true, true); return; }
+    if (act === "backup") { download("timun-isc-sauvegarde.json", JSON.stringify(DATA, null, 2), "application/json"); return; }
+    if (act === "restore") { $("#fJson").value = ""; $("#fJson").click(); return; }
+    if (act === "reset") {
+      if (confirm("Revenir au contenu d'origine ? Toutes vos modifications seront perdues.")) {
+        DATA = JSON.parse(JSON.stringify(EMBEDDED));
+        save();
+        render();
+      }
+    }
+  });
+
+  // Enregistrement des textes quand on quitte la zone de modification
+  document.addEventListener("focusout", (e) => {
+    const el = e.target;
+    if (!el.isContentEditable || !el.dataset.path) return;
+    const v = el.innerText.replace(/\n{3,}/g, "\n\n").trim();
+    if ((get(el.dataset.path) || "") !== v) set(el.dataset.path, v);
+  });
+
+  // Champs date et cases à cocher
+  document.addEventListener("change", (e) => {
+    const el = e.target;
+    if (el.matches("input[type=checkbox][data-path]")) { set(el.dataset.path, el.checked); render(); }
+    if (el.matches("input[type=date][data-path]")) { set(el.dataset.path, el.value); }
+  });
+
+  // Fichiers choisis : images, PDF, sauvegarde
+  $("#fImg").addEventListener("change", async (e) => {
+    const f = e.target.files[0];
+    if (!f || !pendingPath) return;
+    try {
+      flash("Traitement de la photo…");
+      set(pendingPath, await compressImage(f));
+      render();
+    } catch (err) { flash("Impossible de lire cette image.", true); }
+  });
+  $("#fPdf").addEventListener("change", async (e) => {
+    const f = e.target.files[0];
+    if (!f || !pendingPath) return;
+    if (f.size > 3 * 1024 * 1024) {
+      flash("PDF trop lourd pour être stocké ici (max 3 Mo). Utilisez « Coller un lien » avec un lien Google Drive ou Dropbox.", true);
+      return;
+    }
+    try {
+      set(pendingPath, await readFile(f));
+      render();
+      flash("PDF ajouté.");
+    } catch (err) { flash("Impossible de lire ce PDF.", true); }
+  });
+  $("#fJson").addEventListener("change", async (e) => {
+    const f = e.target.files[0];
+    if (!f) return;
+    try {
+      const obj = JSON.parse(await f.text());
+      if (!obj.site || !obj.home || !obj.committees) throw new Error();
+      DATA = obj; DATA.comitesIntro = DATA.comitesIntro || { text: "", photo: "" };
+      save();
+      render();
+      flash("Sauvegarde restaurée.");
+    } catch (err) { flash("Fichier de sauvegarde invalide.", true); }
+  });
+
+  /* ---------- export du site final ---------- */
+  function download(name, text, type) {
+    const a = document.createElement("a");
+    a.href = URL.createObjectURL(new Blob([text], { type }));
+    a.download = name;
+    document.body.appendChild(a);
+    a.click();
+    setTimeout(() => { URL.revokeObjectURL(a.href); a.remove(); }, 1000);
+  }
+  function showHtmlBox(html) {
+    let box = document.getElementById("htmlbox");
+    if (!box) {
+      box = document.createElement("div");
+      box.id = "htmlbox";
+      box.style.cssText = "position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:300;display:flex;align-items:center;justify-content:center;padding:20px";
+      box.innerHTML = '<div style="background:#fff;padding:20px;border-radius:10px;max-width:720px;width:100%;font-family:sans-serif"><p>Cliquez dans la zone, faites Ctrl+A puis Ctrl+C pour tout copier. Collez dans le Bloc-notes, puis enregistrez sous le nom <b>timun-isc-site.html</b> (type : Tous les fichiers).</p><textarea id="htmlta" style="width:100%;height:50vh;font-size:12px"></textarea><p><button id="htmlclose" style="padding:8px 16px;cursor:pointer">Fermer</button></p></div>';
+      document.body.appendChild(box);
+      box.querySelector("#htmlclose").onclick = () => box.remove();
+    }
+    const ta = box.querySelector("#htmlta");
+    ta.value = html;
+    ta.focus();
+    ta.select();
+  }
+  function exportSite(publicMode, asText) {
+    const wasEdit = EDIT;
+    DATA.savedAt = Date.now();
+    try { localStorage.setItem(KEY, JSON.stringify(DATA)); } catch (e) {}
+    EDIT = false;
+    render();
+    const clone = document.documentElement.cloneNode(true);
+    clone.querySelector("#site-data").textContent = JSON.stringify(DATA).replace(/<\//g, "<\\/");
+    clone.body.classList.remove("editing");
+    if (publicMode) clone.body.dataset.public = "1";
+    clone.querySelectorAll("#toast,#fImg,#fPdf,#fJson,.ctl,.del,.addbtn").forEach((n) => n.remove());
+    const html = "<!DOCTYPE html>\n" + clone.outerHTML;
+    if (asText) showHtmlBox(html); else download(publicMode ? "timun-isc-site-public.html" : "timun-isc-site-final.html", html, "text/html");
+    if (wasEdit) { EDIT = true; render(); }
+    const nImg = (html.match(/<img /g) || []).length;
+    flash("Site téléchargé : " + nImg + " photo(s) incluse(s).");
+  }
+
+  window.addEventListener("hashchange", () => { window.scrollTo(0, 0); renderPage(); });
+  render();
+})();
+</script>
+</body>
+</html>
